@@ -1,0 +1,135 @@
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: end;
+  background-color: rgba(0, 0, 0, 0.9);
+  visibility: hidden;
+}
+
+.burger-btn {
+  display: none;
+  z-index: 300;
+}
+
+.burger_open {
+  visibility: visible;
+}
+
+.burger__content {
+  padding: 80px 0 50px 30px;
+  width: 274px;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+  transition: transform 0.3s linear;
+  transform: translateX(100%);
+}
+
+.burger_open .burger__content {
+  transform: translateX(0);
+}
+
+.burger-logo {
+  margin-bottom: 50px;
+  display: block;
+  width: 156px;
+  height: 26px;
+}
+
+.burger-nav__list {
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.burger-nav__link {
+  font-size: 25px;
+  color: #121212;
+  text-transform: uppercase;
+}
+.burger-contacts__text {
+  font-size: 16px;
+  opacity: 0.5;
+  margin-bottom: 9px;
+}
+
+.burger-contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger-contacts__phone,
+.burger-contacts__email {
+  font-size: 20px;
+  color: #121212;
+}
+
+@media screen and (max-width: 961px) {
+  .burger-btn {
+    position: relative;
+    display: block;
+    width: 50px;
+    background: none;
+    border: none;
+  }
+
+  .burger-btn::before,
+  .burger-btn::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  .burger-btn::before {
+    top: 0;
+    width: 100%;
+  }
+
+  .burger-btn::after {
+    top: 6px;
+    width: 31px;
+  }
+
+  .burger-btn_open {
+    position: absolute;
+    top: -12px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+    background-image: url("../sources/images/close-btn.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .burger-btn_open::before,
+  .burger-btn_open::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .burger-btn {
+    width: 38px;
+  }
+
+  .burger-btn::before,
+  .burger-btn::after {
+    top: 4px;
+  }
+
+  .burger-btn::after {
+    top: 9px;
+    width: 24px;
+  }
+}
