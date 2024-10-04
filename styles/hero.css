@@ -1,0 +1,89 @@
+.hero {
+  padding-bottom: 150px;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  max-width: 956px;
+
+  font-size: 60px;
+  line-height: 1;
+  color: #121212;
+}
+
+.hero__box {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+  background-image: url("../sources/images/main-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.hero__text {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  width: 430px;
+
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 961px) {
+  .hero {
+    padding-bottom: 120px;
+  }
+
+  .hero__title {
+    max-width: 802px;
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  .hero__box {
+    height: 400px;
+    background-image: url('../sources/images/main-image-tablets.jpg');
+  }
+
+  .hero__text {
+    left: 42px;
+    bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-bottom: 80px;
+  }
+
+  .hero__title {
+    font-size: 30px;
+    line-height: 1.05;
+  }
+  
+  .hero__box {
+    height: 304px;
+  }
+
+  .hero__text {
+    left: 15px;
+    bottom: 15px;
+    width: 312px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero__box {
+    background-image: url('../sources/images/main-image-phones.jpg');
+  }
+
+  .hero__title {
+    margin-bottom: 25px;
+    padding-right: 11px;
+    width: 348px;
+  }
+}
